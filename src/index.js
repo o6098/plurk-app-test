@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import "bootstrap/dist/css/bootstrap.css";
 import reportWebVitals from "./reportWebVitals";
+import "simple-line-icons/dist/styles/simple-line-icons.css"
 
 ReactDOM.render(
     <React.StrictMode>

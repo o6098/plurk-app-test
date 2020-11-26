@@ -140,14 +140,25 @@ class App extends Component {
             ]
         }
     };
+
+    clickMute(plurk){
+      const plurk_contents = {...this.state.plurk_contents};
+      const plurks = [...plurk_contents.plurks];
+      const index = plurks.indexOf(plurk);
+      plurks[index] = {...plurk};
+      plurks[index].anonymous = !plurks[index].anonymous;
+      plurk_contents.plurks = plurks;
+      this.setState({plurk_contents});
+    }
+
     render() {
-      console.log(this.state.plurks);
+      
         return (
-            <React.Fragment>
+            <div style={{height: '100%'}}>
                 <Navbar />
-                <Timeline plurk_contents={this.state.plurk_contents}/>
+                <Timeline plurk_contents={this.state.plurk_contents} onMute={this.clickMute.bind(this)}/>
                 <Dashboard />
-            </React.Fragment>
+            </div>
         );
     }
 }

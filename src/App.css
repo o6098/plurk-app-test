@@ -36,3 +36,48 @@
         transform: rotate(360deg);
     }
 }
+
+div{
+    display: block;
+}
+
+html, body, #root{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.plurk {
+    position: absolute;
+    display: block;
+    cursor: pointer;
+}
+
+.plurk td{
+    vertical-align: top;
+}
+
+.manager {
+    display: block !important;
+    padding: 3px 4px 0;
+    margin-top: 4px;
+    float: right;
+}
+
+.manager > a{
+    color: #afb8cc;
+    text-decoration: none !important;
+    display: inline-block;
+    margin-left: 12px;
+    border-radius: 3px;
+    padding: 2px 5px 3px;
+    cursor: pointer;
+}
+
+.manager > a:hover{
+    color: #ffffff;
+}
+
+.manager :hover{
+    background-color: #ecc455;
+}
